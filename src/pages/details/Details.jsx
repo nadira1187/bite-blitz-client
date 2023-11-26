@@ -1,5 +1,7 @@
-import {  useLoaderData } from "react-router-dom";
+import { useLoaderData } from "react-router-dom";
 import AddReviews from "./AddReviews";
+import { TbMessageReport } from "react-icons/tb";
+import { BiUpvote } from "react-icons/bi";
 //import { useEffect, useState } from "react";
 
 
@@ -35,8 +37,12 @@ const Details = () => {
                     <a href={product.External_Links}>Product Link:{product.External_Links}</a>
                     <div className="flex justify-between">
                         <p className="text-xl text-red-900 font-semibold">Description: ${product.Description}</p>
-                        <button className="my-6 btn normal-case btn-primary bg-red-900 text-white border-none">Book Now</button>
                     </div>
+                    <div className=" flex gap-5 mt-5">
+                    <button className="btn btn-primary text-xl bg-blue-900 font-bold "><TbMessageReport></TbMessageReport></button>
+                        <button className="btn btn-primary text-xl bg-blue-900 font-bold"><BiUpvote></BiUpvote></button>
+                    </div>
+                  
                 </div>
             </div>
             {/* <div>

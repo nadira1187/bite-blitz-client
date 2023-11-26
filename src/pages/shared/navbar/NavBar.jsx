@@ -53,7 +53,7 @@ const Navbar = () => {
     const dropdownItems = (
         <div className="card compact dropdown-content shadow bg-base-100 -left-20 origin-top-left">
             <div className="card-body w-32">
-                <h2 className="">Dashboard </h2>
+                <h2 className=""><Link to="/dashboard/myproducts">Dashboard</Link> </h2>
                 <p>Your Profile</p>
                 <button onClick={handleSignOut} className="btn btn-xs btn-primary text-white bg-blue-900 border-blue-900 normal-case">
                     Sign Out

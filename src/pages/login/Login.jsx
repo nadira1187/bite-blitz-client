@@ -3,22 +3,29 @@ import { useLocation,useNavigate ,Link} from "react-router-dom";
 import swal from "sweetalert";
 import { FcGoogle } from "react-icons/fc";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import Navbar from "../shared/navbar/NavBar";
+//import Navbar from "../shared/navbar/NavBar";
 import { AuthContext } from "../../provider/AuthProvider";
 import app from "../../firebase/firebase.config";
 import { Helmet } from "react-helmet";
+import useAxiosPublic from "../../hooks/useAxiosPublic";
 //import axios from "axios";
 const Login = () => {
     const {signIn}=useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const auth = getAuth(app);
+    const axiosPublic=useAxiosPublic();
 
     const provider = new GoogleAuthProvider();
     const handleGoogleLogin = () => {
 
         signInWithPopup(auth, provider)
             .then(res => {
+              const userInfo={
+                email:res.user?.email,
+                name:res.user?.displayName,
+              }
+              axiosPublic.post('/users',userInfo)
                 console.log(res);
                 swal("Signed in!", "You Signed in Successfully!", "success");
                 navigate(location?.state?location.state:'/');
@@ -70,7 +77,7 @@ const Login = () => {
            <Helmet>
                 <title>Login</title>
             </Helmet>
-            <Navbar></Navbar>
+            {/* <Navbar></Navbar> */}
         <div className="mt-10 flex justify-center items-center">
             <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form onSubmit={handleLogin} className="card-body">

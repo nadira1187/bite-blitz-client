@@ -9,7 +9,9 @@
       "Description": "The iPhone 13 Pro is Apple's latest flagship smartphone, featuring a stunning Super Retina XDR display, A15 Bionic chip, and advanced camera system with ProRAW and ProRes video recording capabilities. It sets a new standard for mobile photography and performance.",
       "External_Links": ["https://www.applegadgetsbd.com/product/iphone-13-pro"],
       "Product_id": "IPH13P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Dell XPS 13",
@@ -21,7 +23,9 @@
       "Description": "The Dell XPS 13 is a premium ultrabook known for its sleek design and powerful performance. With an InfinityEdge display and the latest Intel processors, it provides an immersive computing experience.",
       "External_Links": ["https://www.custommacbd.com/products/dell-xps-13-plus-9320-price-in-bd"],
       "Product_id": "DXPS13P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Samsung Galaxy S21",
@@ -33,7 +37,9 @@
       "Description": "The Samsung Galaxy S21 is a flagship Android smartphone with a stunning display, powerful Exynos/Snapdragon chipset, and versatile camera system. It brings innovative features for mobile enthusiasts.",
       "External_Links": ["https://www.custommacbd.com/products/samsung-galaxy-s21-fe-5g-price-in-bangladesh"],
       "Product_id": "SGS21P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "MacBook Air M2",
@@ -45,7 +51,9 @@
       "Description": "The MacBook Air M2 is the latest ultrabook from Apple, featuring the powerful M2 chip, a sleek design, and the macOS Monterey operating system. It delivers impressive performance and all-day battery life.",
       "External_Links": ["https://www.applegadgetsbd.com/product/macbook-air-m2-15-inch-8-cpu-10-gpu"],
       "Product_id": "MBAIRM2P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Apple Watch Series 7",
@@ -57,7 +65,9 @@
       "Description": "The Apple Watch Series 7 is a versatile smartwatch with a larger and more durable display. It introduces new health features, faster charging, and a wide range of watch faces to personalize your experience.",
       "External_Links": ["https://www.apple.com/newsroom/2021/09/apple-reveals-apple-watch-series-7-featuring-the-largest-most-advanced-display/"],
       "Product_id": "AWS7P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Sony WH-1000XM4",
@@ -69,7 +79,9 @@
       "Description": "The Sony WH-1000XM4 are premium wireless noise-canceling earbuds, known for their excellent sound quality and industry-leading noise cancellation technology. They offer a comfortable and immersive listening experience.",
       "External_Links": ["https://www.amazon.com/Sony-WH-1000XM4-Headphones-Phone-Call-Microfiber/dp/B0B5HQWSG5"],
       "Product_id": "SWH1000XM4P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "OnePlus 9",
@@ -81,7 +93,9 @@
       "Description": "The OnePlus 9 is a flagship Android smartphone with a high-refresh-rate display, Snapdragon 888 chipset, and Hasselblad-tuned camera system. It offers a smooth and responsive user experience.",
       "External_Links": ["https://www.shopz.com.bd/product/oneplus-9-pro-12-256/"],
       "Product_id": "OP9P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Lenovo ThinkPad X1 Carbon",
@@ -93,7 +107,9 @@
       "Description": "The Lenovo ThinkPad X1 Carbon is a premium business laptop with a durable carbon fiber chassis. It combines portability, performance, and a best-in-class keyboard for a professional computing experience.",
       "External_Links": ["https://www.lenovo.com/bd/en/laptops/thinkpad/thinkpad-x1/ThinkPad-X1-Carbon-6th-Gen/p/22TP2TXX16G"],
       "Product_id": "LTX1CP001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Garmin Venu 2",
@@ -105,7 +121,9 @@
       "Description": "The Garmin Venu 2 is a feature-packed fitness smartwatch with a vibrant AMOLED display. It offers advanced health and wellness tracking, GPS navigation, and a variety of sports modes for active individuals.",
       "External_Links": ["https://www.zdnet.com/article/garmin-venu-2-plus-review/"],
       "Product_id": "GVENU2P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "AirPods Pro",
@@ -117,7 +135,9 @@
       "Description": "The AirPods Pro are Apple's premium wireless earbuds with active noise cancellation. They deliver immersive sound, a customizable fit, and seamless integration with Apple devices.",
       "External_Links": ["https://www.amazon.co.uk/Apple-MWP22ZM-A-AirPods-Pro/dp/B07ZPML7NP"],
       "Product_id": "APROPP001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Google Pixel 6",
@@ -129,7 +149,9 @@
       "Description": "The Google Pixel 6 is a flagship Android smartphone known for its impressive camera system, featuring advanced AI and computational photography. It offers a clean Android experience with timely updates.",
       "External_Links": ["https://www.applegadgetsbd.com/product/pixel-6"],
       "Product_id": "GP6P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "HP Spectre x360",
@@ -141,7 +163,9 @@
       "Description": "The HP Spectre x360 is a premium 2-in-1 laptop with a convertible design. It features a stunning OLED display, powerful performance, and a gem-cut design for a luxurious computing experience.",
       "External_Links": ["https://www.custommacbd.com/products/hp-spectre-x360-2-in-1-laptop-14-ef0797nr-13-5-touch-screen-12th-gen-intel-core-i7-16gb-ram-512gb-ssd-price-in-bangladesh/"],
       "Product_id": "HSX360P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Samsung Galaxy Watch 4",
@@ -153,7 +177,9 @@
       "Description": "The Samsung Galaxy Watch 4 is a stylish smartwatch running on the Tizen operating system. It offers advanced health tracking, a rotating bezel for easy navigation, and a variety of watch faces.",
       "External_Links": ["https://gadgetnmusic.com/product/samsung-galaxy-watch-4-40mm-r860-smartwatch/"],
       "Product_id": "SGW4P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Sony WF-1000XM4",
@@ -165,7 +191,9 @@
       "Description": "The Sony WF-1000XM4 are premium true wireless earbuds with industry-leading noise cancellation and exceptional audio quality. They offer a comfortable and secure fit for all-day listening.",
       "External_Links": ["https://www.applegadgetsbd.com/product/sony-wf-1000xm4-wireless-noise-cancelling-headphones"],
       "Product_id": "SWF1000XM4P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "OnePlus Nord 2",
@@ -177,7 +205,9 @@
       "Description": "The OnePlus Nord 2 is a mid-range Android smartphone with a powerful MediaTek Dimensity processor and a versatile camera system. It delivers a smooth and responsive user experience.",
       "External_Links": ["https://price.zoombangla.com/product/oneplus-nord-2-lite-price-in-bangladesh-and-india/"],
       "Product_id": "OPN2P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Microsoft Surface Laptop 4",
@@ -189,7 +219,9 @@
       "Description": "The Microsoft Surface Laptop 4 is a sleek and powerful laptop with a high-resolution PixelSense touchscreen display. It offers a choice of Intel or AMD processors for versatile performance.",
       "External_Links": ["https://www.techlandbd.com/microsoft-surface-laptop-4-core-i7-laptop"],
       "Product_id": "MSL4P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Fitbit Sense",
@@ -201,7 +233,9 @@
       "Description": "The Fitbit Sense is a health-focused smartwatch with advanced sensors for stress management, heart health tracking, and built-in GPS. It offers a comprehensive approach to fitness and well-being.",
       "External_Links": ["https://www.applegadgetsbd.com/product/fitbit-sense-health-smartwatch"],
       "Product_id": "FSENSEP001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Jabra Elite 85t",
@@ -213,7 +247,9 @@
       "Description": "The Jabra Elite 85t are true wireless earbuds with adjustable ANC, providing a customizable and immersive audio experience. They feature a comfortable fit and long battery life.",
       "External_Links": ["https://www.bdshop.com/jabra-elite-85t-earbuds"],
       "Product_id": "JELITE85TP001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
       "Product_name": "Xiaomi Mi 11",
@@ -225,7 +261,9 @@
       "Description": "The Xiaomi Mi 11 is a flagship Android smartphone with a high-refresh-rate display, Snapdragon 888 processor, and a versatile camera system. It offers a premium experience at an affordable price.",
       "External_Links": ["https://diamu.com.bd/product/xiaomi-mi-11-8gb-256gb/"],
       "Product_id": "XMI11P001",
-      "Featured": false
+      "Featured": false,
+      "vote":"0",
+      "report":"0"
     },
     {
         "Product_name": "Sennheiser Momentum True Wireless 2",
@@ -237,7 +275,9 @@
         "Description": "The Sennheiser Momentum True Wireless 2 are high-quality earphones with premium sound, effective noise isolation, and touch controls for a personalized listening experience.",
         "External_Links": ["https://www.amazon.com/Sennheiser-Momentum-True-Wireless-Cancellation/dp/B085LW8N9Q?th=1"],
         "Product_id": "SENMOMTW2P001",
-        "Featured": false
+        "Featured": false,
+        "vote":"0",
+      "report":"0"
       },
       {
         "Product_name": "ASUS ROG Zephyrus G14",
@@ -249,7 +289,9 @@
         "Description": "The ASUS ROG Zephyrus G14 is a high-performance gaming laptop with an AMD Ryzen 9 processor, NVIDIA RTX 3060 GPU, and a mesmerizing AniMe Matrix display.",
         "External_Links": ["https://www.custommacbd.com/products/asus-rog-zephyrus-g14-ga401iv-2020-14-fhd-120hz-ips-ultra-slim-gaming-laptop-amd-ryzen-9-4900hs-16gb-1tb-rtx-2060-6gb-w10"],
         "Product_id": "ASUSG14P001",
-        "Featured": false
+        "Featured": false,
+        "vote":"0",
+      "report":"0"
       },
       {
         "Product_name": "JBL Free X",
@@ -261,7 +303,9 @@
         "Description": "The JBL Free X are true wireless earphones with JBL Signature Sound, hands-free calling, and a compact design for on-the-go music enthusiasts.",
         "External_Links": ["https://www.amazon.com/JBL-Wireless-Headphones-Built-Microphone/dp/B081J9Q1YB"],
         "Product_id": "JBLFREEX001",
-        "Featured": false
+        "Featured": false,
+        "vote":"0",
+      "report":"0"
       },
       {
         "Product_name": "Samsung Galaxy Buds Pro",
@@ -273,7 +317,9 @@
         "Description": "The Samsung Galaxy Buds Pro are premium true wireless earbuds with intelligent ANC, immersive sound, and customizable fit for an exceptional audio experience.",
         "External_Links": ["https://www.samsung.com/us/mobile/audio/all-audio/"],
         "Product_id": "SGBUDSPRO001",
-        "Featured": false
+        "Featured": false,
+        "vote":"0",
+      "report":"0"
       },
       {
         "Product_name": "Acer Swift 5",
@@ -285,7 +331,9 @@
         "Description": "The Acer Swift 5 is an ultrabook known for its lightweight design, powerful performance, and a narrow-bezel display, making it ideal for productivity on the go.",
         "External_Links": ["https://price.zoombangla.com/product/acer-swift-5-sf514-55ta-5508s-price-in-bangladesh-and-india/"],
         "Product_id": "ACERSWIFT5P001",
-        "Featured": false
+        "Featured": false,
+        "vote":"0",
+      "report":"0"
       },
       {
         "Product_name": "Beyerdynamic Soul BYRD",
@@ -297,7 +345,9 @@
         "Description": "The Beyerdynamic Soul BYRD are wired in-ear headphones with high-quality audio reproduction, ergonomic design, and durable build for music enthusiasts.",
         "External_Links": ["https://www.amazon.in/Beyerdynamic-Soul-Wired-Headphones-Black/dp/B07JY8SSVD"],
         "Product_id": "BYRDSOUL001",
-        "Featured": false
+        "Featured": false,
+        "vote":"0",
+      "report":"0"
       },
       {
         "Product_name": "Skullcandy Indy Fuel",
@@ -309,7 +359,9 @@
         "Description": "The Skullcandy Indy Fuel are true wireless earbuds with a wireless charging case, touch controls, and a comfortable fit for all-day listening.",
         "External_Links": ["https://executiveample.com/skullcandy-indy-fuel-true-wireless-in-ear-bluetooth-earbuds/"],
         "Product_id": "SKYINDYFUEL001",
-        "Featured": false
+        "Featured": false,
+        "vote":"0",
+      "report":"0"
       }     
       
 ]
