@@ -2,11 +2,14 @@
 import { createContext, useEffect, useState } from "react";
 import { getAuth ,createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import app from "../firebase/firebase.config";
- import axios from "axios";
+// import axios from "axios";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 export const AuthContext =createContext(null);
 const auth = getAuth(app);
 
 const AuthProvider = ({children}) => {
+    const axiosPublic=useAxiosPublic();
+
     const [user,setUser] =useState(null);
     const[loading,setLoading] =useState(true)
     const createUser=(email,password) =>{
@@ -36,24 +39,24 @@ const AuthProvider = ({children}) => {
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, currentUser => {
             const userEmail = currentUser?.email || user?.email;
-            const loggedUser = { email: userEmail };
+            
             setUser(currentUser);
             console.log('current user', currentUser);
             setLoading(false);
             // if user exists then issue a token
             if (currentUser) {
-                axios.post('https://stay-zen-server.vercel.app/jwt', loggedUser, { withCredentials: true })
+                const loggedUser = { email: userEmail };
+                axiosPublic.post('/jwt', loggedUser)
                     .then(res => {
-                        console.log('token response', res.data);
+                        if (res.data.token) {
+                            localStorage.setItem('access-token', res.data.token);
+                            setLoading(false);
+                        }
                     })
             }
             else {
-                axios.post('https://stay-zen-server.vercel.app/logout', loggedUser, {
-                    withCredentials: true
-                })
-                    .then(res => {
-                        console.log(res.data);
-                    })
+                localStorage.removeItem('access-token');
+                setLoading(false);
             }
         });
         return () => {

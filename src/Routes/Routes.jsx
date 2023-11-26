@@ -10,6 +10,9 @@ import Details from "../pages/details/Details";
 import ErrorPage from "../components/error/ErrorPage";
 import Dashboard from "../layout/Dashboard";
 import MyProduct from "../pages/dashboard/myProduct/MyProduct";
+import MyProfile from "../pages/dashboard/myProfile/MyProfile";
+import AddProduct from "../pages/addProduct/AddProduct";
+import ManageUser from "../pages/dashboard/manageUser/ManageUser";
 
 export const router = createBrowserRouter([
     {
@@ -47,6 +50,19 @@ export const router = createBrowserRouter([
             {
                 path:'myproducts',
                 element:<MyProduct></MyProduct>
+            },
+            {
+                path:'myprofile',
+                element:<MyProfile></MyProfile>
+            },
+            {
+                path:'addproduct',
+                element:<AddProduct></AddProduct>
+            },
+            //admin routes
+            {
+                path:'manageuser',
+                element:<ManageUser></ManageUser>
             }
         ]
     }

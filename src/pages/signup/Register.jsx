@@ -44,6 +44,7 @@ const Register = () => {
             const userInfo = {
               name: name,
               email: email,
+              photo:photo,isSubscibed:false,
             }
             console.log("updated")
             axiosPublic.post('/users', userInfo)

@@ -2,7 +2,7 @@
 const AddProduct = () => {
     return (
         <div>
-            
+            add product
         </div>
     );
 };
