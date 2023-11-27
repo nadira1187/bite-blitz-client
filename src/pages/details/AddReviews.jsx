@@ -46,6 +46,7 @@ const AddReviews = ({product}) => {
         <div>
             
             
+            
             <form onSubmit={handleAddReview} >
                 <div className="  flex flex-col gap-4  justify-center items-center mb-5">
                     <input readOnly type="text" name="name" defaultValue={user?.displayName} className=" input input-bordered input-secondary w-full max-w-xs" />
