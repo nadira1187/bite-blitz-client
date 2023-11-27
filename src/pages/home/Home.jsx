@@ -1,5 +1,7 @@
 
 import Banner from "./Banner";
+import Featured from "./Featured";
+import Trending from "./Trending";
 
 
 const Home = () => {
@@ -7,6 +9,8 @@ const Home = () => {
         <div className="overflow-hidden">
            
             <Banner></Banner>
+            <Featured></Featured>
+            <Trending></Trending>
            
         </div>
     );

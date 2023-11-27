@@ -1,28 +1,24 @@
 import {
     useQuery
 } from '@tanstack/react-query'
-import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import { RiAdminLine } from "react-icons/ri";
 import { MdAddModerator } from "react-icons/md";
 import swal from 'sweetalert';
+import useAxiosSecure from '../../../hooks/useAxiosSecure';
 
 const ManageUser = () => {
-    const axiosPublic = useAxiosPublic();
+    const axiosSecure = useAxiosSecure();
    
     const { data: user = [],refetch } = useQuery({
         queryKey: ['user'],
         queryFn: async () => {
-            const res = await axiosPublic.get('/user', {
-                headers:{
-                    authorization:`bearer ${localStorage.getItem('access-token')}`
-                }
-            });
+            const res = await axiosSecure.get('/user');
             
             return res.data;
         }
     });
     const handleMakeAdmin=users=>{
-        axiosPublic.patch(`/users/admin/${users._id}`)
+        axiosSecure.patch(`/users/admin/${users._id}`)
         .then(res=>{
             console.log(res.data);
             if(res.data.modifiedCount>0)
@@ -33,7 +29,7 @@ const ManageUser = () => {
         })
     }
     const handleMakeModerator=users=>{
-        axiosPublic.patch(`/users/moderator/${users._id}`)
+        axiosSecure.patch(`/users/moderator/${users._id}`)
         .then(res=>{
             console.log(res.data);
             if(res.data.modifiedCount>0)
