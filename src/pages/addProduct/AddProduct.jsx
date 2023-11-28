@@ -2,11 +2,16 @@ import { useForm } from "react-hook-form"
 import useAuth from "../../hooks/useAuth"
 import { useState } from "react";
 import { WithContext as ReactTags } from 'react-tag-input';
+import useAxiosPublic from "../../hooks/useAxiosPublic";
+import Swal from "sweetalert2";
 
 
 
+const image_hosting_key = import.meta.env.VITE_IMAGE_HOSTING_KEY;
+const image_hosting_api = `https://api.imgbb.com/1/upload?key=${image_hosting_key}`;
 const AddProduct=()=> {
     const {user}=useAuth();
+    const axiosPublic=useAxiosPublic();
     const {
         register,
         handleSubmit,
@@ -16,14 +21,56 @@ const AddProduct=()=> {
     const [tags, setTags] = useState([]);
 
 
+    const today = new Date();
 
-    const onSubmit = (data) => {
-        data.tags = tags.map((tag) => tag.text);
+    const formattedDate = today.toLocaleDateString();
+  
+    const onSubmit =async (data) => {
         console.log(data)
+        const imageFile = { image: data.image[0] }
+        const res = await axiosPublic.post(image_hosting_api, imageFile, {
+            headers: {
+                'content-type': 'multipart/form-data'
+            }
+        });
+        console.log(watch(res.data));
+        data.tags = tags.map((tag) => tag.text);
+        console.log(data);
+        if(res.data.success)
+        {
+            const productInfo = {
+                
+                Product_name: data.Product_name,
+                Description:data.Description,
+                Date:formattedDate,
+                Status:"pending",
+                External_Links:data.External_Links,
+                Tags:data.Tags,
+                vote:0,
+                report:0,
+                Featured:false,
+                Product_image: res.data.data.display_url,
+                Owner_email:user?.email
+
+            }
+            console.log(productInfo)
+            const productRes = await axiosPublic.post('/addproduct', productInfo);
+            console.log(productRes.data)
+            if(productRes.data.insertedId){
+                // show success popup
+                 Swal.fire({
+                    position: "top-end",
+                    icon: "success",
+                    title: `${data.Product_name} is added to the menu.`,
+                    showConfirmButton: false,
+                    timer: 1500
+                  });
+            }
+        }
     }
 
 
-    console.log(watch("example")) // watch input value by passing the name of it
+   
 
 
     return (
@@ -37,9 +84,9 @@ const AddProduct=()=> {
           </div>    
             </div>
             <h2 className="text-4xl lg:text-6xl text-blue-900 text-center font-bold mb-8">Add your product</h2>
-            <form className="form form-control gap-3 justify-center items-center" onSubmit={handleSubmit(onSubmit)}>
+            <form className="form form-control gap-3 justify-center items-center" onSubmit={handleSubmit(onSubmit,errors)}>
                 <div className="flex flex-col lg:flex-row gap-3">
-                    <input className="input input-bordered input-info w-full max-w-xs " placeholder="Product Name"{...register("Product_name",{ required: true })} />
+                    <input  className="input input-bordered input-info w-full max-w-xs " placeholder="Product Name"{...register("Product_name",{ required: true })} />
                     <div className="form-control w-full">
                         <input {...register('Product_image', { required: true })} type="file" className="file-input file-input-bordered file-input-info w-full max-w-xs" />
                     </div>
@@ -62,7 +109,7 @@ const AddProduct=()=> {
                         handleAddition={(tag) => setTags([...tags, tag])}
                     />
                 </div>
-               <input className="btn btn-primary bg-blue-900 text-white" type="submit" />
+               <button className="btn btn-primary bg-blue-900 text-white">Submit</button>
                {errors.exampleRequired && <span>This field is required</span>}
             </form>
         </div>
