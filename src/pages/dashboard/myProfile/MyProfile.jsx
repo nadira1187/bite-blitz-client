@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 const MyProfile = () => {
   const [users, setUsers] = useState(null);
   const {user}=useContext(AuthContext)
+  const verified = location.state?.verified || false;
 
   useEffect(() => {
     // Assuming authState contains the user's email
@@ -32,12 +33,12 @@ const MyProfile = () => {
           <p className='text-xl font-medium'>Users Email: {users.email}</p>
           </div>
           {/* Add your logic based on the actual subscription status */}
-          {users.isSubscribed ? (
+          {verified ? (
             <p>Status:Verified</p>
           ) : (
             <div className='card-actions justify-end p-4'>
                  <button className='btn btn-primary bg-blue-900 text-white normal-case' >
-             <Link to='/dashboard/payment'>Subscribe Now </Link> 
+             <Link to='/dashboard/payment'>$10 </Link> 
             </button>
             </div>
            

@@ -78,7 +78,7 @@ const CheckoutForm = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate('/dashboard/myprofile');
+                navigate('/dashboard/myprofile', { state: { verified: true } });
             }
         }
     }    

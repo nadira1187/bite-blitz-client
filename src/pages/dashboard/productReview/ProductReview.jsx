@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import useAxiosPublic from '../../../hooks/useAxiosPublic';
 import { useQuery } from '@tanstack/react-query';
@@ -55,7 +55,24 @@ const ProductReview = () => {
   };
 
   const handleReject = (product) => {
-    // Handle product rejection logic
+    // Check if the product is not already rejected
+    if (!acceptedProducts.includes(product._id)) {
+      // Assuming you have an endpoint to handle product rejection
+      axiosPublic
+        .patch(`/reject/${product._id}`)
+        .then((res) => {
+          console.log(res.data);
+          if (res.data.modifiedCount > 0) {
+            // Update the accepted products list
+            setAcceptedProducts((prevAccepted) => [...prevAccepted, product._id]);
+            refetch();
+            swal('Product rejected successfully');
+          }
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    }
   };
 
   return (
@@ -101,7 +118,7 @@ const ProductReview = () => {
                   </button>
                 </td>
                 <td>
-                  <button onClick={() => handleReject(products)}>
+                  <button onClick={() => handleReject(products)} disabled={acceptedProducts.includes(products._id)}>
                     <MdOutlineCancel className="text-2xl text-blue-900 " />
                   </button>
                 </td>
