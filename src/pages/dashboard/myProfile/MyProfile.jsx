@@ -1,6 +1,7 @@
 import  { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { AuthContext } from '../../../provider/AuthProvider';
+import { Link } from 'react-router-dom';
 
 const MyProfile = () => {
   const [users, setUsers] = useState(null);
@@ -35,8 +36,8 @@ const MyProfile = () => {
             <p>Status:Verified</p>
           ) : (
             <div className='card-actions justify-end p-4'>
-                 <button className='btn btn-primary bg-blue-900 text-white normal-case' onClick={() => console.log('Subscribe logic here')}>
-              Subscribe Now 
+                 <button className='btn btn-primary bg-blue-900 text-white normal-case' >
+             <Link to='/dashboard/payment'>Subscribe Now </Link> 
             </button>
             </div>
            

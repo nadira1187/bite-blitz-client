@@ -16,6 +16,7 @@ import ManageUser from "../pages/dashboard/manageUser/ManageUser";
 import ProductReview from "../pages/dashboard/productReview/ProductReview";
 import Report from "../pages/dashboard/report/Report";
 import PrivateRoute from "../components/private/PrivateRoute";
+import Payment from "../pages/dashboard/payment/Payment";
 
 export const router = createBrowserRouter([
     {
@@ -61,6 +62,10 @@ export const router = createBrowserRouter([
             {
                 path:'addproduct',
                 element:<AddProduct></AddProduct>
+            },
+            {
+                path:'payment',
+                element:<Payment></Payment>
             },
             //admin routes
             {

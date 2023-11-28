@@ -1,16 +1,22 @@
 /* eslint-disable react/prop-types */
-import  { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { BiUpvote } from "react-icons/bi";
 import { TbMessageReport } from "react-icons/tb";
-import { Link } from "react-router-dom";
+import { Link,  useNavigate } from "react-router-dom";
 import swal from "sweetalert";
-import useAuth from "../../hooks/useAuth";  // Import the useAuth hook or adjust the path accordingly
+import { AuthContext } from "../../provider/AuthProvider";
+//import useAuth from "../../hooks/useAuth"; // Import the useAuth hook or adjust the path accordingly
 
 const ProductCard = ({ product }) => {
-  const { user } = useAuth(); // Assuming useAuth provides information about the logged-in user
-  const { _id, Product_name, Product_image, Tags, Owner_email } = product;
+
+  const { user} = useContext(AuthContext); // Assuming useAuth provides information about the logged-in user
+  const { _id, Product_name, Product_image, Tags, Owner_email,vote } = product;
   const [isOwner, setIsOwner] = useState(false);
+  const [hasVoted, setHasVoted] = useState(false);
+  //const location=useLocation();
+  //console.log(user)
+  const navigate=useNavigate();
 
   useEffect(() => {
     // Check if the logged-in user is the owner of the product
@@ -19,14 +25,22 @@ const ProductCard = ({ product }) => {
 
   const handleUpvote = async () => {
     try {
-      // Allow upvote only if the user is logged in and not the owner
-      if (user && !isOwner) {
-        await axios.patch(`http://localhost:5000/upvote/${_id}`);
-        swal("Updated");
-      } else {
-        // Display a message or handle accordingly (e.g., disable the button)
-        swal("You cannot upvote your own product.");
+      if (!user) {
+        navigate('/login');
+        return;      
       }
+
+      // Check if the user has already voted
+      if (hasVoted) {
+        // Display a message or handle accordingly (e.g., disable the button)
+        swal("You have already upvoted this product.");
+        return;
+      }
+
+      // Allow upvote only if the user is logged in and not the owner
+      await axios.patch(`http://localhost:5000/upvote/${_id}`);
+      setHasVoted(true);
+      swal("Updated");
     } catch (error) {
       console.error(error);
       // Handle error, e.g., show an error message
@@ -36,7 +50,7 @@ const ProductCard = ({ product }) => {
   const handleReport = async () => {
     try {
       await axios.patch(`http://localhost:5000/report/${_id}`);
-      swal("Updated");
+      swal("You Reported this Product");
     } catch (error) {
       console.error(error);
       // Handle error, e.g., show an error message
@@ -68,11 +82,11 @@ const ProductCard = ({ product }) => {
             <button
               onClick={handleUpvote}
               className={`btn btn-primary text-xl bg-blue-900 font-bold ${
-                isOwner ? 'cursor-not-allowed' : '' // Disable button styling for the owner
+                isOwner ? "cursor-not-allowed" : "" // Disable button styling for the owner
               }`}
-              disabled={isOwner} // Disable the button for the owner
+              disabled={isOwner || hasVoted} // Disable the button for the owner or if already voted
             >
-              <BiUpvote></BiUpvote>
+              <BiUpvote></BiUpvote> {vote}
             </button>
           </div>
         </div>
