@@ -49,8 +49,11 @@ const ProductCard = ({ product }) => {
 
   const handleReport = async () => {
     try {
-      await axios.patch(`http://localhost:5000/report/${_id}`);
-      swal("You Reported this Product");
+      const response = await axios.patch(`http://localhost:5000/report/${_id}`);
+      console.log(response)
+      if (response.data.modifiedCount > 0) {
+        swal("You Reported this Product");
+      }
     } catch (error) {
       console.error(error);
       // Handle error, e.g., show an error message
