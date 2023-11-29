@@ -4,6 +4,7 @@ import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import useAuth from "../../../hooks/useAuth";
 import Swal from "sweetalert2";
 import {  useNavigate } from "react-router-dom";
+import useAxiosPublic from "../../../hooks/useAxiosPublic";
 
 
 const CheckoutForm = () => {
@@ -11,6 +12,7 @@ const CheckoutForm = () => {
     const elements = useElements();
     const [clientSecret, setClientSecret] = useState('')
     const [transactionId, setTransactionId] = useState('');
+   const axiosPublic=useAxiosPublic();
 
      const [error,setError]=useState([]);
      const axiosSecure=useAxiosSecure();
@@ -78,7 +80,22 @@ const CheckoutForm = () => {
                     showConfirmButton: false,
                     timer: 1500
                 });
-                navigate('/dashboard/myprofile', { state: { verified: true } });
+                try {
+                  const response = await axiosPublic.patch('/confirmpayment', {
+                    paymentIntentId: paymentIntent.id,
+                    userEmail: user?.email, // Assuming user object has an 'email' field
+                  });
+            
+                  if (response.data.success) {
+                    console.log('User status updated successfully.');
+                  } else {
+                    console.error(response.data.message);
+                  }
+                } catch (error) {
+                  console.error('Error updating user status:', error);
+                }
+                navigate('/dashboard/myprofile');
+
             }
         }
     }    

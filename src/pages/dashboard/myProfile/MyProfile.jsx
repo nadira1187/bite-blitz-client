@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 const MyProfile = () => {
   const [users, setUsers] = useState(null);
   const {user}=useContext(AuthContext)
-  const verified = location.state?.verified || false;
+  
 
   useEffect(() => {
     // Assuming authState contains the user's email
     const userEmail = user?.email;
 
     // Fetch user data based on the authenticated user's email
-    axios.get(`http://localhost:5000/user/${userEmail}`)
+    axios.get(`https://byte-blitz-server.vercel.app/user/${userEmail}`)
       .then(response => {
         setUsers(response.data.user);
       })
@@ -33,7 +33,7 @@ const MyProfile = () => {
           <p className='text-xl font-medium'>Users Email: {users.email}</p>
           </div>
           {/* Add your logic based on the actual subscription status */}
-          {verified ? (
+          {users.isSubscibed ? (
             <p>Status:Verified</p>
           ) : (
             <div className='card-actions justify-end p-4'>

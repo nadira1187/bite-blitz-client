@@ -11,7 +11,7 @@ const Products = () => {
   const fetchProducts = async (page) => {
     try {
       console.log(page);
-      const response = await axios.get(`http://localhost:5000/product?page=${page}`);
+      const response = await axios.get(`https://byte-blitz-server.vercel.app/product?page=${page}`);
       if (currentPageRef.current === page) {
         setProducts(response.data);
       }
@@ -37,7 +37,7 @@ const Products = () => {
     try {
       const tagsArray = Array.isArray(searchTag) ? searchTag : [searchTag];
 
-      const response = await axios.get(`http://localhost:5000/product/searchByTag?Tags=${encodeURIComponent(tagsArray.join(','))}`);
+      const response = await axios.get(`https://byte-blitz-server.vercel.app/product/searchByTag?Tags=${encodeURIComponent(tagsArray.join(','))}`);
       setProducts(response.data);
     } catch (error) {
       console.error(error);

@@ -11,7 +11,7 @@ const AddReviews = ({product}) => {
    // console.log(user);
 
     // useEffect(() => {
-    //     fetch(`http://localhost:5000/product`)
+    //     fetch(`https://byte-blitz-server.vercel.app/product`)
     //         .then((res) => res.json())
     //         .then((data) => setProducts(data));
     // }, []);
@@ -27,7 +27,7 @@ const AddReviews = ({product}) => {
         const reviews = {
            name,image,ratings,description,product_id:_id
         }
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://byte-blitz-server.vercel.app/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

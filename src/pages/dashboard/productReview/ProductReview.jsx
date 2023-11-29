@@ -77,7 +77,7 @@ const ProductReview = () => {
 
   return (
     <div>
-      <p className="ml-5 mt-4 font-medium">Total User: {product.length}</p>
+      <p className="ml-5 mt-4 font-medium">Total Product: {product.length}</p>
       <div className="overflow-x-auto rounded-xl ml-3">
         <table className="table table-zebra">
           <thead>

@@ -15,10 +15,10 @@ const links = <>
         isPending ? "pending" : isActive ?
             "text-[#b8553a] font-bold underline" : ""
     }>Products</NavLink>
-    <NavLink to="/myproducts" className={({ isActive, isPending }) =>
+    {/* <NavLink to="/myproducts" className={({ isActive, isPending }) =>
         isPending ? "pending" : isActive ?
             "text-[#b8553a] font-bold underline" : ""
-    }>My Products</NavLink>
+    }>My Products</NavLink> */}
 
 </>
 

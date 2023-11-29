@@ -21,7 +21,9 @@ const ProductCard = ({ product }) => {
   useEffect(() => {
     // Check if the logged-in user is the owner of the product
     setIsOwner(user && user.email === Owner_email);
-  }, [user, Owner_email]);
+    const hasVotedLocally = localStorage.getItem(`hasVoted_${_id}`);
+    setHasVoted(hasVotedLocally === 'true');
+  }, [user, Owner_email,_id]);
 
   const handleUpvote = async () => {
     try {
@@ -38,9 +40,11 @@ const ProductCard = ({ product }) => {
       }
 
       // Allow upvote only if the user is logged in and not the owner
-      await axios.patch(`http://localhost:5000/upvote/${_id}`);
-      setHasVoted(true);
-      swal("Updated");
+      await axios.patch(`https://byte-blitz-server.vercel.app/upvote/${_id}`);
+      localStorage.setItem(`hasVoted_${_id}`, 'true');
+      
+      setHasVoted(true);    
+        swal("You liked this product");
     } catch (error) {
       console.error(error);
       // Handle error, e.g., show an error message
@@ -49,7 +53,7 @@ const ProductCard = ({ product }) => {
 
   const handleReport = async () => {
     try {
-      const response = await axios.patch(`http://localhost:5000/report/${_id}`);
+      const response = await axios.patch(`https://byte-blitz-server.vercel.app/report/${_id}`);
       console.log(response)
       if (response.data.modifiedCount > 0) {
         swal("You Reported this Product");
