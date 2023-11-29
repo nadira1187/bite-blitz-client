@@ -4,6 +4,7 @@ import { GrUpdate } from "react-icons/gr";
 import { FaTrash } from "react-icons/fa";
 import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import swal from "sweetalert";
+import { Link } from "react-router-dom";
 
 
 const MyProduct = () => {
@@ -61,7 +62,7 @@ const MyProduct = () => {
         <th>{product.Product_name}</th>
         <td>{product.vote} </td>
         <td>{product.Status}</td>
-        <td onClick={()=>handleUpdate} className="text-blue-900"><GrUpdate/></td>
+        <Link to={`/dashboard/update/${product._id}`}> <td className="text-blue-900"><GrUpdate/></td></Link>
         <td onClick={()=>handleDelete(product)} className="text-blue-900"><FaTrash></FaTrash></td>
       </tr>
      </tbody>

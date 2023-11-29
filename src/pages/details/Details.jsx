@@ -2,6 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import AddReviews from "./AddReviews";
 import { TbMessageReport } from "react-icons/tb";
 import { BiUpvote } from "react-icons/bi";
+import Review from "./Review";
 //import { useEffect, useState } from "react";
 
 
@@ -67,7 +68,7 @@ const Details = () => {
             {/* <ReviewPage></ReviewPage> */}
             {/* <Review id={room._id} ></Review> */}
             <AddReviews key={product._id} product={product}></AddReviews>
-
+             <Review key={product._id} product={product}></Review>
         </div>
     );
 };
