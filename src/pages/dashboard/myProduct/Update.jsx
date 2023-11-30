@@ -1,6 +1,5 @@
 import { useState } from "react";
 import useAuth from "../../../hooks/useAuth";
-import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import { WithContext as ReactTags } from 'react-tag-input';
@@ -14,7 +13,6 @@ const Update = () => {
     const product=useLoaderData();
     const {_id,Product_name}=product;
     const {user}=useAuth();
-    const axiosPublic=useAxiosPublic();
     const name=Product_name;
     const {
         register,

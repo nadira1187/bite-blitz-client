@@ -19,6 +19,10 @@ import PrivateRoute from "../components/private/PrivateRoute";
 import Payment from "../pages/dashboard/payment/Payment";
 import Update from "../pages/dashboard/myProduct/Update";
 import Statistics from "../pages/dashboard/statistics/Statistics";
+import Coupon from "../pages/dashboard/ManageCoupon/Coupon";
+import AddCoupon from "../pages/dashboard/ManageCoupon/AddCoupon";
+import ViewCoupon from "../pages/dashboard/ManageCoupon/ViewCoupon";
+import EditCoupon from "../pages/dashboard/ManageCoupon/EditCoupon";
 
 export const router = createBrowserRouter([
     {
@@ -82,6 +86,22 @@ export const router = createBrowserRouter([
             {
                 path:'statistics',
                 element:<Statistics></Statistics>
+            },
+            {
+                path:'managecoupons',
+                element:<Coupon></Coupon>
+            },
+            {
+                path:'addcoupons',
+                element:<AddCoupon></AddCoupon>
+            },
+            {
+                path:'viewcoupons',
+                element:<ViewCoupon></ViewCoupon>
+            },
+            {
+                path:'editcoupons/:id',
+                element:<EditCoupon></EditCoupon>
             },
             //moderator routes
             {

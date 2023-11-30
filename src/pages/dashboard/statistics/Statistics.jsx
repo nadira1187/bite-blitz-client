@@ -1,16 +1,16 @@
-import { useEffect } from 'react';
+
 import { PieChart } from 'react-minimal-pie-chart';
 import useAxiosSecure from '../../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+
 
 const Statistics = () => {
     const axiosSecure = useAxiosSecure();
    
-    const { data: stat = [], refetch } = useQuery({
+    const { data: stat = []} = useQuery({
         queryKey: ['stat'],
         queryFn: async () => {
-            const res = await axios.get('https://byte-blitz-server.vercel.app/piechartdata');
+            const res = await axiosSecure.get('/piechartdata');
             
             return res.data;
         }
