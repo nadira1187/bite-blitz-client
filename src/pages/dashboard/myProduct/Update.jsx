@@ -53,7 +53,7 @@ const Update = () => {
 
 
         // Make the update request using the product ID
-        const productRes = await axios.put(`http://localhost:5000/update/${_id}`, updatedProductInfo);
+        const productRes = await axios.put(`https://byte-blitz-server.vercel.app/update/${_id}`, updatedProductInfo);
 
         if (productRes.data.success) {
             // show success popup

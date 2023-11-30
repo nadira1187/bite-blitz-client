@@ -6,7 +6,7 @@ const Review = ({ product }) => {
   const { data: review = [], refetch } = useQuery({
     queryKey: ["review"],
     queryFn: async () => {
-      const res = await axios.get(`http://localhost:5000/review/${product._id}`);
+      const res = await axios.get(`https://byte-blitz-server.vercel.app/review/${product._id}`);
       refetch();
       return res.data;
     },

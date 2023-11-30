@@ -18,6 +18,7 @@ import Report from "../pages/dashboard/report/Report";
 import PrivateRoute from "../components/private/PrivateRoute";
 import Payment from "../pages/dashboard/payment/Payment";
 import Update from "../pages/dashboard/myProduct/Update";
+import Statistics from "../pages/dashboard/statistics/Statistics";
 
 export const router = createBrowserRouter([
     {
@@ -71,12 +72,16 @@ export const router = createBrowserRouter([
             {
                 path:'update/:id',
                 element:<Update></Update>,
-                loader:({params}) => fetch(`http://localhost:5000/products/${params.id}`),
+                loader:({params}) => fetch(`https://byte-blitz-server.vercel.app/products/${params.id}`),
             },
             //admin routes
             {
                 path:'manageuser',
                 element:<ManageUser></ManageUser>
+            },
+            {
+                path:'statistics',
+                element:<Statistics></Statistics>
             },
             //moderator routes
             {

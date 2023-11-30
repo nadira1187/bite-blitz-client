@@ -3,10 +3,14 @@ import useAxiosPublic from "../../../hooks/useAxiosPublic";
 import { BiMessageDetail } from "react-icons/bi";
 import { Link } from "react-router-dom";
 import { FaTrashAlt } from "react-icons/fa";
+import { useState } from "react";
+import axios from "axios";
+import swal from "sweetalert";
 
 
 const Report = () => {
     const axiosPublic = useAxiosPublic();
+
 
     const { data: product = [], refetch } = useQuery({
       queryKey: ['product'],
@@ -15,6 +19,17 @@ const Report = () => {
         return res.data;
       },
     });
+    const handleDelete = async (productId) => {
+      try {
+        await axios.delete(`https://byte-blitz-server.vercel.app/deleteproduct/${productId}`);
+        // Update the products list after deletion
+        swal("Product is deleted")
+        refetch();
+        
+      } catch (error) {
+        console.error("Error deleting product:", error);
+      }
+    };
     console.log(product)
     return (
         <div>
@@ -36,7 +51,7 @@ const Report = () => {
      <th>{index+1}</th>
      <td>{products.Product_name}</td>
      <td><Link to={`/details/${products._id}`}><BiMessageDetail></BiMessageDetail></Link></td>
-     <td><FaTrashAlt></FaTrashAlt></td>
+     <td  > <button><FaTrashAlt onClick={() => handleDelete(products._id)}></FaTrashAlt></button></td>
    </tr>
   
  </tbody>
