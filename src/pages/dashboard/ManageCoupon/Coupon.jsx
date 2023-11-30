@@ -1,19 +1,18 @@
 import { BiMessageDetail } from "react-icons/bi";
 import { MdOutlinePlaylistAdd } from "react-icons/md";
 import { Link } from "react-router-dom";
-import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import {  useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 
 
 const Coupon = () => {
-    const axiosSecure = useAxiosSecure();
+   
    
     const { data: coupon = []} = useQuery({
         queryKey: ['coupon'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:5000/coupons');
+            const res = await axios.get('https://byte-blitz-server.vercel.app/coupons');
             
             return res.data;
 

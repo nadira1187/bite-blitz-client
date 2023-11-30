@@ -1,16 +1,15 @@
 import swal from "sweetalert";
-import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
 
 const EditCoupon = () => {
-    const axiosSecure = useAxiosSecure();
+
    
     const { data: coupon = []} = useQuery({
         queryKey: ['coupon'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:5000/coupons');
+            const res = await axios.get('https://byte-blitz-server.vercel.app/coupons');
             
             return res.data;
 
@@ -29,7 +28,7 @@ const EditCoupon = () => {
         const coupons = {
            code,Date,amount,description
         }
-        fetch(`http://localhost:5000/couponss/${_id}`, {
+        fetch(`https://byte-blitz-server.vercel.app/couponss/${_id}`, {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'

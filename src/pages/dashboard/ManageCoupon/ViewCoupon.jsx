@@ -1,5 +1,4 @@
 import {  useQuery } from "@tanstack/react-query";
-import useAxiosSecure from "../../../hooks/useAxiosSecure";
 import axios from "axios";
 import { GrUpdate } from "react-icons/gr";
 import { Link } from "react-router-dom";
@@ -8,12 +7,11 @@ import swal from "sweetalert";
 
 
 const ViewCoupon = () => {
-    const axiosSecure = useAxiosSecure();
    
     const { data: coupon = []} = useQuery({
         queryKey: ['coupon'],
         queryFn: async () => {
-            const res = await axios.get('http://localhost:5000/coupons');
+            const res = await axios.get('https://byte-blitz-server.vercel.app/coupons');
             
             return res.data;
         }
@@ -26,7 +24,7 @@ const ViewCoupon = () => {
     const handleDeleteCoupon = async () => {
         try {
             // Perform the delete operation
-            await axios.delete(`http://localhost:5000/coupons/${_id}`);
+            await axios.delete(`https://byte-blitz-server.vercel.app/coupons/${_id}`);
             swal("Deleted");
 
             // Invalidate and refetch the coupon data after successful deletion

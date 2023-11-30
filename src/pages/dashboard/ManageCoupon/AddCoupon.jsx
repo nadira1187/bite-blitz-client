@@ -13,7 +13,7 @@ const AddCoupon = () => {
         const coupons = {
            code,Date,amount,description
         }
-        fetch('http://localhost:5000/coupon', {
+        fetch('https://byte-blitz-server.vercel.app/coupon', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
