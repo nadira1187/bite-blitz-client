@@ -1,5 +1,5 @@
 # live-site:(https://byte-blitz-client.web.app)
-# Five bullet Points Of Our Project
+# Five bullet Points Of My Project
 ## Product Discovery and Interaction:
 Users can explore the latest tech products showcased on the platform.
 Interaction features include upvoting products to express approval or interest.
