@@ -4,7 +4,10 @@
   1. Allow moderators to perform  actions on multiple products at once (e.g., accept, reject, or feature multiple products).
   2. The platform incorporates a payment system that enables users to unlock premium features or obtain extra facilities through paid subscriptions.
   3. The platform implements a role-based access control system with distinct user roles such as Normal Users, Moderators, and Admins.
-  4. The homepage features a dynamic sorting mechanism for both the Featured Products and Trending Products sections.  
+  4. The homepage features a dynamic sorting mechanism for both the Featured Products and Trending Products sections.
+# Project Selling Line:
+“Simplify Your Tech Discovery Journey”: My platform revolutionizes how usersexplore and share the latest tech products. Say goodbye to information overload and unreliable reviews.With curated content, a robust moderation system, and dynamic sorting, we solve the problem of overwhelming choices and provide a trusted space for discovering, discussing, and engaging with
+cutting-edge technology effortlessly  
 # Five bullet Points Of My Project
 ## Product Discovery and Interaction:
 Users can explore the latest tech products showcased on the platform.
