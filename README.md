@@ -1,6 +1,6 @@
 # live-site:(https://byte-blitz-client.web.app)
 # server-link:(https://github.com/nadira1187/byte-blitz-server)
-# Two unique features
+# Unique features
   1. Allow moderators to perform  actions on multiple products at once (e.g., accept, reject, or feature multiple products).
   2. The platform incorporates a payment system that enables users to unlock premium features or obtain extra facilities through paid subscriptions.
   3. The platform implements a role-based access control system with distinct user roles such as Normal Users, Moderators, and Admins.
