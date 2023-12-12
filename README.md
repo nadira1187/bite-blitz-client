@@ -1,5 +1,7 @@
 # live-site:(https://byte-blitz-client.web.app)
 # server-link:(https://github.com/nadira1187/byte-blitz-server)
+# Two unique features
+  ### Allow moderators to perform bulk actions on multiple products at once (e.g., accept, reject, or feature multiple products). 
 # Five bullet Points Of My Project
 ## Product Discovery and Interaction:
 Users can explore the latest tech products showcased on the platform.
