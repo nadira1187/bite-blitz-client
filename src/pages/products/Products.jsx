@@ -60,14 +60,17 @@ const Products = () => {
           value={searchTag}
           onChange={(e) => setSearchTag(e.target.value)}
         />
-        <button onClick={handleSearch} className="btn bg-blue-900 border-blue-900 text-white text-lg font-bold join-item rounded-r-full">
+        <button onClick={handleSearch} className="btn bg-blue-900 border-blue-900 text-white text-lg font-bold join-item ">
           <FaSearch></FaSearch>
         </button>
+
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="flex justify-center">
+      <div className="grid  grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
         {products.map((product) => (
           <ProductCard key={product._id} product={product}></ProductCard>
         ))}
+      </div>
       </div>
       <div className="join my-5 flex justify-end">
         {[1, 2, 3, 4].map((pageNumber) => (

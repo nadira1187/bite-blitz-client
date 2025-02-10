@@ -66,15 +66,15 @@ const ProductCard = ({ product }) => {
 
   return (
     <div>
-      <div className="card card-compact w-80 bg-base-100 shadow-xl">
+      <div className="card card-compact w-64 h-full  bg-base-100 shadow-xl">
         <figure>
           <Link to={`/details/${_id}`}>
             <img className="w-64 h-64" src={Product_image} alt="Shoes" />
           </Link>
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{Product_name}</h2>
-          <p className="flex">
+          <h2 className="text-slate-800 font-medium md:text-xl sm:text-lg ">{Product_name}</h2>
+          <p className="flex text-gray-400 text-xs md:text-sm font-semibold">
             {Tags?.map((tag, index) => (
               <p key={index}>#{tag}</p>
             ))}
@@ -82,13 +82,13 @@ const ProductCard = ({ product }) => {
           <div className="card-actions justify-end">
             <button
               onClick={handleReport}
-              className="btn btn-primary text-xl bg-blue-900 font-bold "
+              className="btn text-white  text-xl bg-blue-950 font-bold "
             >
               <TbMessageReport></TbMessageReport>
             </button>
             <button
               onClick={handleUpvote}
-              className={`btn btn-primary text-xl bg-blue-900 font-bold ${
+              className={`btn text-white  text-xl bg-blue-950 font-bold ${
                 isOwner ? "cursor-not-allowed" : "" // Disable button styling for the owner
               }`}
               disabled={isOwner || hasVoted} // Disable the button for the owner or if already voted

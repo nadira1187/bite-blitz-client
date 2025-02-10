@@ -11,6 +11,7 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 //import axios from "axios";
 const Login = () => {
     const {signIn}=useContext(AuthContext);
+
     const location = useLocation();
     const navigate = useNavigate();
     const auth = getAuth(app);
@@ -101,13 +102,14 @@ const Login = () => {
           <button className="btn btn-primary normal-case bg-blue-900 border-blue-900 text-white">Login</button>
         </div>
         <div className="form-control mt-6">
-          <button onClick={handleGoogleLogin} className="btn btn-primary normal-case bg-transparent border-rose-500 text-black"><FcGoogle className="text-xl"></FcGoogle>Continue with Google</button>
+          <button onClick={handleGoogleLogin} className="btn btn-primary normal-case bg-transparent border-blue-950 text-black"><FcGoogle className="text-xl"></FcGoogle>Continue with Google</button>
         </div>
 
         <Link to='/Register'>Do not have an account ? <a className="text-blue-900 font-medium" >Register</a></Link>
       </form>
     </div>
         </div>
+        
         </div>
     );
 };
