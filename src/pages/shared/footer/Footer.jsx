@@ -1,28 +1,159 @@
-import { Link } from "react-router-dom";
+"use client"
 
+import { Link } from "react-router-dom"
+import { Facebook, Twitter, Youtube, Mail, Phone, MapPin, ArrowUp } from "lucide-react"
 
 const Footer = () => {
-    return (
-        <div className="mt-5">
-            <footer className="footer footer-center p-10 bg-blue-950 text-white  rounded">
-  <nav className="grid grid-flow-col gap-4">
-    <a className="link link-hover"><Link to="/">Home</Link></a> 
-    <a className="link link-hover"><Link to='/products'> Product</Link> </a> 
-    <a className="link link-hover">Contact</a>
-  </nav> 
-  <nav>
-    <div className="grid grid-flow-col gap-4">
-      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"></path></svg></a> 
-      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></a> 
-      <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
-    </div>
-  </nav> 
-  <aside>
-    <p>Copyright © 2023 - All right reserved by ByteBlitz corporation Ltd.</p>
-  </aside>
-</footer>
-        </div>
-    );
-};
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
 
-export default Footer;
+  return (
+    <div className="mt-20 relative">
+      {/* Luxury footer with navy blue gradient */}
+      <footer className="bg-blue-800 text-white relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.1),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.05),transparent_50%)]"></div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8 py-16">
+          {/* Main Footer Content */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            {/* Brand Section */}
+            <div className="lg:col-span-2">
+              <div className="flex items-center space-x-4 mb-6">
+                <div className="relative">
+                  <div className="absolute inset-0 bg-white/20 rounded-full blur-xl"></div>
+                  <img
+                    className="relative w-12 h-12 rounded-full shadow-lg ring-2 ring-white/30"
+                    src="https://i.ibb.co/68zDmj3/shopping-bag.png"
+                    alt="ByteBlitz Logo"
+                  />
+                </div>
+                <div>
+                  <h2 className="text-3xl font-bold bg-gradient-to-r from-white to-blue-100 bg-clip-text text-transparent">
+                    ByteBlitz
+                  </h2>
+                  <p className="text-blue-200 font-light">Premium Tech Store</p>
+                </div>
+              </div>
+              <p className="text-blue-100 leading-relaxed mb-6 max-w-md">
+                Discover innovation with our curated collection of cutting-edge tech accessories. Quality, performance,
+                and style in every product.
+              </p>
+              <div className="flex space-x-4">
+                <a
+                  href="#"
+                  className="flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-300 backdrop-blur-sm border border-white/20 hover:border-white/30 group"
+                >
+                  <Facebook className="w-5 h-5 text-blue-100 group-hover:text-white transition-colors" />
+                </a>
+                <a
+                  href="#"
+                  className="flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-300 backdrop-blur-sm border border-white/20 hover:border-white/30 group"
+                >
+                  <Twitter className="w-5 h-5 text-blue-100 group-hover:text-white transition-colors" />
+                </a>
+                <a
+                  href="#"
+                  className="flex items-center justify-center w-12 h-12 bg-white/10 hover:bg-white/20 rounded-xl transition-all duration-300 backdrop-blur-sm border border-white/20 hover:border-white/30 group"
+                >
+                  <Youtube className="w-5 h-5 text-blue-100 group-hover:text-white transition-colors" />
+                </a>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-6 relative">
+                Quick Links
+                <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-white to-transparent"></div>
+              </h3>
+              <ul className="space-y-4">
+                <li>
+                  <Link
+                    to="/"
+                    className="text-blue-100 hover:text-white transition-colors duration-200 flex items-center group"
+                  >
+                    <span className="w-2 h-2 bg-blue-300 rounded-full mr-3 group-hover:bg-white transition-colors"></span>
+                    Home
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/products"
+                    className="text-blue-100 hover:text-white transition-colors duration-200 flex items-center group"
+                  >
+                    <span className="w-2 h-2 bg-blue-300 rounded-full mr-3 group-hover:bg-white transition-colors"></span>
+                    Products
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-blue-100 hover:text-white transition-colors duration-200 flex items-center group"
+                  >
+                    <span className="w-2 h-2 bg-blue-300 rounded-full mr-3 group-hover:bg-white transition-colors"></span>
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    className="text-blue-100 hover:text-white transition-colors duration-200 flex items-center group"
+                  >
+                    <span className="w-2 h-2 bg-blue-300 rounded-full mr-3 group-hover:bg-white transition-colors"></span>
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            {/* Contact Info */}
+            <div>
+              <h3 className="text-xl font-semibold text-white mb-6 relative">
+                Contact Info
+                <div className="absolute bottom-0 left-0 w-12 h-0.5 bg-gradient-to-r from-white to-transparent"></div>
+              </h3>
+              <ul className="space-y-4">
+                <li className="flex items-center space-x-3 text-blue-100">
+                  <Mail className="w-5 h-5 text-blue-300" />
+                  <span>info@byteblitz.com</span>
+                </li>
+                <li className="flex items-center space-x-3 text-blue-100">
+                  <Phone className="w-5 h-5 text-blue-300" />
+                  <span>+1 (555) 123-4567</span>
+                </li>
+                <li className="flex items-start space-x-3 text-blue-100">
+                  <MapPin className="w-5 h-5 text-blue-300 mt-0.5" />
+                  <span>123 Tech Street, Digital City, TC 12345</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Bottom Section */}
+          <div className="border-t border-white/10 pt-8">
+            <div className="flex flex-col md:flex-row items-center justify-between">
+              <div className="text-center md:text-left mb-4 md:mb-0">
+                <p className="text-blue-200">© 2023 ByteBlitz Corporation Ltd. All rights reserved.</p>
+                <p className="text-blue-300 text-sm mt-1">Crafted with ❤️ for tech enthusiasts</p>
+              </div>
+
+              {/* Back to Top Button */}
+              <button
+                onClick={scrollToTop}
+                className="flex items-center space-x-2 bg-white/10 hover:bg-white/20 text-blue-100 hover:text-white px-6 py-3 rounded-xl transition-all duration-300 backdrop-blur-sm border border-white/20 hover:border-white/30 group"
+              >
+                <ArrowUp className="w-4 h-4 group-hover:-translate-y-1 transition-transform" />
+                <span className="font-medium">Back to Top</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  )
+}
+
+export default Footer

@@ -3,6 +3,7 @@ import { FaChartLine } from "react-icons/fa";
 import { FaUserGroup } from "react-icons/fa6";
 import { RiCoupon4Line } from "react-icons/ri";
 import { NavLink } from "react-router-dom";
+// eslint-disable-next-line react/prop-types
 const AdminDashboard = ({ isCollapsed }) => {
     return (
         <div className="p-4" >

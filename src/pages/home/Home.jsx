@@ -6,7 +6,7 @@ import Trending from "./Trending";
 
 const Home = () => {
     return (
-        <div className="overflow-hidden">
+        <div className="mx-auto">
            
             <Banner></Banner>
             <Featured></Featured>

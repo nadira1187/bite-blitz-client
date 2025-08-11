@@ -1,0 +1,138 @@
+/* Custom navy blue color definitions */
+:root {
+  --navy-50: #f0f4ff;
+  --navy-100: #e0e9ff;
+  --navy-200: #c7d6ff;
+  --navy-300: #a5b8ff;
+  --navy-400: #8191ff;
+  --navy-500: #6366f1;
+  --navy-600: #4f46e5;
+  --navy-700: #4338ca;
+  --navy-800: #3730a3;
+  --navy-900: #312e81;
+}
+
+.bg-navy-50 {
+  background-color: var(--navy-50);
+}
+.bg-navy-100 {
+  background-color: var(--navy-100);
+}
+.bg-navy-200 {
+  background-color: var(--navy-200);
+}
+.bg-navy-300 {
+  background-color: var(--navy-300);
+}
+.bg-navy-400 {
+  background-color: var(--navy-400);
+}
+.bg-navy-500 {
+  background-color: var(--navy-500);
+}
+.bg-navy-600 {
+  background-color: var(--navy-600);
+}
+.bg-navy-700 {
+  background-color: var(--navy-700);
+}
+.bg-navy-800 {
+  background-color: var(--navy-800);
+}
+.bg-navy-900 {
+  background-color: var(--navy-900);
+}
+
+.text-navy-50 {
+  color: var(--navy-50);
+}
+.text-navy-100 {
+  color: var(--navy-100);
+}
+.text-navy-200 {
+  color: var(--navy-200);
+}
+.text-navy-300 {
+  color: var(--navy-300);
+}
+.text-navy-400 {
+  color: var(--navy-400);
+}
+.text-navy-500 {
+  color: var(--navy-500);
+}
+.text-navy-600 {
+  color: var(--navy-600);
+}
+.text-navy-700 {
+  color: var(--navy-700);
+}
+.text-navy-800 {
+  color: var(--navy-800);
+}
+.text-navy-900 {
+  color: var(--navy-900);
+}
+
+.border-navy-50 {
+  border-color: var(--navy-50);
+}
+.border-navy-100 {
+  border-color: var(--navy-100);
+}
+.border-navy-200 {
+  border-color: var(--navy-200);
+}
+.border-navy-300 {
+  border-color: var(--navy-300);
+}
+.border-navy-400 {
+  border-color: var(--navy-400);
+}
+.border-navy-500 {
+  border-color: var(--navy-500);
+}
+.border-navy-600 {
+  border-color: var(--navy-600);
+}
+.border-navy-700 {
+  border-color: var(--navy-700);
+}
+.border-navy-800 {
+  border-color: var(--navy-800);
+}
+.border-navy-900 {
+  border-color: var(--navy-900);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom backdrop blur for better browser support */
+.backdrop-blur-lg {
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+}
+
+.backdrop-blur-sm {
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+/* Custom gradient backgrounds */
+.from-navy-900 {
+  --tw-gradient-from: var(--navy-900);
+  --tw-gradient-to: rgb(49 46 129 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.via-blue-900 {
+  --tw-gradient-to: rgb(30 58 138 / 0);
+  --tw-gradient-stops: var(--tw-gradient-from), #1e3a8a, var(--tw-gradient-to);
+}
+
+.to-navy-800 {
+  --tw-gradient-to: var(--navy-800);
+}
