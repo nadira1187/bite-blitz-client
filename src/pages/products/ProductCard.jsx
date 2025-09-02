@@ -75,15 +75,16 @@ const ProductCard = ({ product }) => {
   return (
        <Card className="group h-full bg-white/90 backdrop-blur-sm border-0 shadow-lg hover:shadow-2xl transition-all duration-300 overflow-hidden">
       <div className="relative overflow-hidden">
-        <Link href={`/details/${_id}`}>
-          <div className="aspect-square overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
-            <img
-              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              src={Product_image || "/placeholder.svg"}
-              alt={Product_name}
-            />
-          </div>
-        </Link>
+       <Link to={`/details/${_id}`}>
+  <div className="aspect-square overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200">
+    <img
+      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+      src={Product_image || "/placeholder.svg"}
+      alt={Product_name}
+    />
+  </div>
+</Link>
+
 
         {/* Overlay gradient */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />

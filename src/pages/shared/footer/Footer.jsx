@@ -1,4 +1,3 @@
-"use client"
 
 import { Link } from "react-router-dom"
 import { Facebook, Twitter, Youtube, Mail, Phone, MapPin, ArrowUp } from "lucide-react"

@@ -1,31 +1,68 @@
+/* eslint-disable react/prop-types */
+import { FaChartLine, FaUserFriends, FaCrown } from "react-icons/fa"
+import { RiCoupon4Line } from "react-icons/ri"
+import { NavLink } from "react-router-dom"
 
-import { FaChartLine } from "react-icons/fa";
-import { FaUserGroup } from "react-icons/fa6";
-import { RiCoupon4Line } from "react-icons/ri";
-import { NavLink } from "react-router-dom";
-// eslint-disable-next-line react/prop-types
 const AdminDashboard = ({ isCollapsed }) => {
-    return (
-        <div className="p-4" >
-             <li >
-                                <NavLink className="flex flex-row gap-2" to="/dashboard/statistics">
-                                    <FaChartLine className="mt-1 text-2xl" /> {!isCollapsed && <span className="pl-1">Statistics</span>}
-                                </NavLink>
-                            </li>
+  const menuItems = [
+    {
+      to: "/dashboard/statistics",
+      icon: FaChartLine,
+      label: "Statistics",
+      description: "View analytics & reports",
+    },
+    {
+      to: "/dashboard/manageuser",
+      icon: FaUserFriends,
+      label: "Manage Users",
+      description: "User administration",
+    },
+    {
+      to: "/dashboard/managecoupons",
+      icon: RiCoupon4Line,
+      label: "Manage Coupons",
+      description: "Discount management",
+    },
+  ]
 
-                            <li>
-                                <NavLink className="flex flex-row gap-2" to="/dashboard/manageuser">
-                                    <FaUserGroup className="mt-1 text-2xl" /> {!isCollapsed && <span className="pl-1">Manage Users</span>}
-                                </NavLink>
-                            </li>
-
-                            <li>
-                                <NavLink className="flex flex-row gap-2" to="/dashboard/managecoupons">
-                                    <RiCoupon4Line className="mt-1 text-2xl" /> {!isCollapsed && <span className="pl-1">Manage Coupons</span>}
-                                </NavLink>
-                            </li>
+  return (
+    <div className="space-y-2">
+      {!isCollapsed && (
+        <div className="mb-4 p-3 bg-gradient-to-r from-red-500/10 to-red-600/10 border border-red-200 rounded-lg">
+          <div className="flex items-center gap-2">
+            <FaCrown className="text-red-600" />
+            <span className="text-xs font-semibold text-red-700 uppercase tracking-wide">Admin Panel</span>
+          </div>
         </div>
-    );
-};
+      )}
 
-export default AdminDashboard;
+      {menuItems.map((item) => (
+        <li key={item.to} className="list-none">
+          <NavLink
+            to={item.to}
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-3 py-3 rounded-lg transition-all duration-200 group relative overflow-hidden ${
+                isActive
+                  ? "bg-sidebar-primary text-sidebar-primary-foreground shadow-md"
+                  : "text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground"
+              }`
+            }
+          >
+            <item.icon
+              className={`text-lg group-hover:scale-110 transition-transform ${isCollapsed ? "mx-auto" : ""}`}
+            />
+            {!isCollapsed && (
+              <div className="flex-1">
+                <span className="font-medium block">{item.label}</span>
+                <span className="text-xs opacity-70">{item.description}</span>
+              </div>
+            )}
+            <div className="absolute left-0 top-0 w-1 h-full bg-sidebar-primary transform scale-y-0 group-hover:scale-y-100 transition-transform origin-top"></div>
+          </NavLink>
+        </li>
+      ))}
+    </div>
+  )
+}
+
+export default AdminDashboard

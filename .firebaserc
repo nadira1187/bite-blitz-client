@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "byte-blitz-client"
+  },
+  "targets": {
+    "byte-blitz-client": {
+      "hosting": {
+        "default": [
+          "byte-blitz-client"
+        ]
+      }
+    }
   }
 }
